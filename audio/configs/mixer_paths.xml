@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mixer>
+    <!-- These are the initial mixer settings -->
+    <ctl name="Speaker Volume" value="128" />
+    <ctl name="Headphone Volume" value="118" />
+    <ctl name="Voice Call Volume" value="100" />
+    <ctl name="Ring Volume" value="100" />
+    <ctl name="Music Volume" value="100" />
+    <ctl name="Mic1 Volume" value="100" />
+    <ctl name="Mic2 Volume" value="100" />
+
+    <!-- Paths for output devices -->
+    <path name="speaker">
+        <ctl name="Speaker Switch" value="1" />
+        <ctl name="Speaker Volume" value="128" />
+    </path>
+
+    <path name="headphones">
+        <ctl name="Headphone Switch" value="1" />
+        <ctl name="Headphone Volume" value="118" />
+    </path>
+
+    <path name="speaker-and-headphones">
+        <path name="speaker" />
+        <path name="headphones" />
+    </path>
+
+    <!-- Paths for input devices -->
+    <path name="main-mic">
+        <ctl name="Main Mic Switch" value="1" />
+        <ctl name="Mic1 Volume" value="100" />
+    </path>
+
+    <path name="headset-mic">
+        <ctl name="Headset Mic Switch" value="1" />
+        <ctl name="Mic2 Volume" value="100" />
+    </path>
+
+    <!-- Paths for voice call -->
+    <path name="voice-call-speaker">
+        <path name="speaker" />
+        <ctl name="Voice Call Volume" value="100" />
+    </path>
+
+    <path name="voice-call-headphones">
+        <path name="headphones" />
+        <ctl name="Voice Call Volume" value="100" />
+    </path>
+
+    <!-- Paths for media playback -->
+    <path name="media-speaker">
+        <path name="speaker" />
+        <ctl name="Music Volume" value="100" />
+    </path>
+
+    <path name="media-headphones">
+        <path name="headphones" />
+        <ctl name="Music Volume" value="100" />
+    </path>
+
+    <!-- Paths for ringtone -->
+    <path name="ringtone-speaker">
+        <path name="speaker" />
+        <ctl name="Ring Volume" value="100" />
+    </path>
+
+    <path name="ringtone-headphones">
+        <path name="headphones" />
+        <ctl name="Ring Volume" value="100" />
+    </path>
+</mixer> 

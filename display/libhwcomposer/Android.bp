@@ -1,0 +1,28 @@
+cc_library_shared {
+    name: "hwcomposer.sm8650",
+    defaults: ["hidl_defaults"],
+    vendor: true,
+    relative_install_path: "hw",
+
+    srcs: [
+        "hwc_device.cpp",
+    ],
+
+    header_libs: [
+        "libhardware_headers",
+        "liblog_headers",
+    ],
+
+    shared_libs: [
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libhardware",
+    ],
+
+    cflags: [
+        "-DLOG_TAG=\"hwc_sm8650\"",
+        "-Wall",
+        "-Werror",
+    ],
+} 
