@@ -1,0 +1,25 @@
+cc_library_shared {
+    name: "libmm-venc-v4l2",
+    vendor: true,
+    cflags: [
+        "-D_ANDROID_",
+        "-Wall",
+        "-Werror",
+    ],
+    srcs: [
+        "vidc_hal.cpp",
+    ],
+    shared_libs: [
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libhardware",
+    ],
+    header_libs: [
+        "libhardware_headers",
+        "media_plugin_headers",
+    ],
+    include_dirs: [
+        "hardware/qcom-caf/sm8650/media/mm-video-v4l2",
+    ],
+} 
